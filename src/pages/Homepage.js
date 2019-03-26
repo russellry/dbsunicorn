@@ -1,5 +1,5 @@
 import React from 'react'
-import Barchart from './Barchart';
+import Barchart from '../components/Barchart'
 
 class Homepage extends React.Component{
     render(){

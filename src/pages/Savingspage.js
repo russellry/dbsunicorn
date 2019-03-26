@@ -1,9 +1,9 @@
 import React from "react";
-import Savingsbar from "./Savingsbar";
+import Savingsbar from "../components/Savingsbar";
 import youtube from "../api/youtube"
-import SearchBar from './SearchBar';
-import VideoList from './VideoList';
-import VideoDetail from './VideoDetail';
+import SearchBar from '../components/SearchBar';
+import VideoList from '../components/VideoList';
+import VideoDetail from '../components/VideoDetail';
 
 class Savingspage extends React.Component {
   state = {videos: [], selectedVideo: null}
