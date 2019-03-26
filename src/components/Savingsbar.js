@@ -8,7 +8,7 @@ export default class Savingsbar extends React.Component {
           <div class="bar">
             <div class="progress" />
           </div>
-          <div class="label">Uploading Files</div>
+          <div class="label">$950 to go!</div>
         </div>
       </div>   
     );
