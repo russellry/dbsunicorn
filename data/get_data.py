@@ -70,7 +70,7 @@ def get_transaction_details(accountId, start_date=START_DATE, end_date=END_DATE)
 
 
 def get_balance(accountId, month=None, year=None):
-    url = "{}/accounts/deposit/{}".format(BASE, accountId)
+    url = "{}/accounts/deposit/{}/balance".format(BASE, accountId)
     if month is not None or END_DATE is not None:
         url += "?"
         if month is not None:
@@ -106,6 +106,14 @@ def get_personal_msg(customerId):
         return data
 
 
+# def get_marketing_data():
+#     data = dict()
+#     marketing_msg_lst = get_marketing_msg_list()
+#     for msg in marketing_msg_lst:
+#         messageId = msg['messageId']
+
+
+
 def get_personal_data():
     full_data = dict()
     # id
@@ -126,9 +134,8 @@ def get_personal_data():
             accountId = content['accountId']
             res[customerId]['debitAccounts'][accountId] = content
 
-            acc = res[customerId]['debitAccounts'][accountId]
-            acc.update(get_balance(accountId))
-            acc["transactions"] = get_transaction_details(accountId)
+            res[customerId]['debitAccounts'][accountId]['balance'] = get_balance(accountId)
+            res[customerId]['debitAccounts'][accountId]["transactions"] = get_transaction_details(accountId)
 
         creditAccounts = get_credit_accounts(customerId)
         res[customerId]['creditAccounts'] = dict()
@@ -136,8 +143,7 @@ def get_personal_data():
             accountId = content['accountId']
             res[customerId]['creditAccounts'][accountId] = content
 
-            acc = res[customerId]['creditAccounts'][accountId]
-            acc.update(get_outstading_balance(accountId))
+            res[customerId]['creditAccounts'][accountId]['outstanding_balance'] = get_outstading_balance(accountId)
 
         res[customerId]['message'] = get_personal_msg(customerId)
         full_data.update(res)

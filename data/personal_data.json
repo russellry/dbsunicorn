@@ -13,6 +13,14 @@
                 "type": "SAVINGS",
                 "displayName": "POSB SAVINGS ACCOUNT",
                 "accountNumber": "490723483",
+                "balance": {
+                    "availableBalance": "27354.91",
+                    "currency": "S$",
+                    "dateOfBalance": "2019-03-26T04:53:11.730+0000",
+                    "displayName": "POSB SAVINGS ACCOUNT",
+                    "accountNumber": "432262070",
+                    "accountType": "SAVINGS"
+                },
                 "transactions": [
                     {
                         "transactionId": "119973fe-7d7b-494b-86cf-872c34b6780c",
@@ -5629,17 +5637,27 @@
                 "accountId": 106,
                 "displayName": "VISA Platinum",
                 "cardNumber": "1234-2345-3456-4567",
-                "outstandingAmount": "1322.80",
-                "datePayable": "2019-01-26T00:00:00.000+0000",
-                "currency": "S$"
+                "outstanding_balance": {
+                    "accountId": 106,
+                    "outstandingAmount": "1322.80",
+                    "datePayable": "2019-01-26T00:00:00.000+0000",
+                    "currency": "S$",
+                    "displayName": "VISA Platinum",
+                    "cardNumber": "1234-2345-3456-4567"
+                }
             },
             "206": {
                 "accountId": 206,
                 "displayName": "DBS Altitude Visa Signature Card",
                 "cardNumber": "1111-2222-3333-4444",
-                "outstandingAmount": "0.00",
-                "datePayable": null,
-                "currency": "S$"
+                "outstanding_balance": {
+                    "accountId": 206,
+                    "outstandingAmount": "0.00",
+                    "datePayable": null,
+                    "currency": "S$",
+                    "displayName": "DBS Altitude Visa Signature Card",
+                    "cardNumber": "1111-2222-3333-4444"
+                }
             }
         },
         "message": [
@@ -5675,6 +5693,14 @@
                 "type": "SAVINGS",
                 "displayName": "POSB SAVINGS ACCOUNT",
                 "accountNumber": "588967151",
+                "balance": {
+                    "availableBalance": "6023.02",
+                    "currency": "S$",
+                    "dateOfBalance": "2019-03-26T04:53:15.578+0000",
+                    "displayName": "POSB SAVINGS ACCOUNT",
+                    "accountNumber": "806290151",
+                    "accountType": "SAVINGS"
+                },
                 "transactions": [
                     {
                         "transactionId": "d1911856-60cc-48fb-aac7-f4cb2be6efba",
