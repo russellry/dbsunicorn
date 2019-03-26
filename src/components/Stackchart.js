@@ -16,11 +16,13 @@ function BarGroup(props) {
   </g>
 }
 
-class Barchart extends React.Component {
+class Stackchart extends React.Component {
   state = {
     data: [
-      { name: 'Credit', value: 50 },
-      { name: 'Debit', value: 20 },
+      { name: 'Morning', value: 10 },
+      { name: 'Afternoon', value: 40 },
+      { name: 'Night', value: 20 },
+      { name: 'Midnight', value: 5 },
     ]
   }
 
@@ -41,4 +43,4 @@ class Barchart extends React.Component {
   }
 }
 
-export default Barchart;
+export default Stackchart;
