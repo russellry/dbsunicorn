@@ -25,16 +25,19 @@ def sort_transaction(data):
     for t in data:
         datestr = t["date"]
         tag = t['tag']
+        transaction_type = t['type']
+
         amount = round(float(t["amount"]), 2)
 
         dateobj = datetime.strptime(datestr, "%Y-%m-%dT%H:%M:%S.%f%z")
         part_of_day = get_part_of_day(dateobj)
 
-        # tag
-        if tag in res[part_of_day].keys():
-            res[part_of_day][tag] += amount
-        else:
-            res[part_of_day][tag] = amount
+        if transaction_type == "DEBIT":
+            # tag
+            if tag in res[part_of_day].keys():
+                res[part_of_day][tag] += amount
+            else:
+                res[part_of_day][tag] = amount
 
     return res
 
@@ -44,14 +47,16 @@ def sort_transaction_by_cat(data):
 
     res = dict()
     for t in data:
+        transaction_type = t['type']
         tag = t['tag']
         amount = round(float(t["amount"]), 2)
 
-        # tag
-        if tag in res.keys():
-            res[tag] += amount
-        else:
-            res[tag] = amount
+        if transaction_type == "DEBIT":
+            # tag
+            if tag in res.keys():
+                res[tag] += amount
+            else:
+                res[tag] = amount
 
     return res
 

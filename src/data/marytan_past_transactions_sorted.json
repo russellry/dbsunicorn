@@ -1,24 +1,24 @@
 {
     "midnight": {
         "TRANSPORT": 1006.28,
-        "TRANSFER": 43607.39,
+        "TRANSFER": 452.0400000000001,
         "ATM": 4000.0
     },
     "morning": {
         "TRANSPORT": 505.46,
         "ATM": 1600.0,
-        "TRANSFER": 196.01
+        "TRANSFER": 46.95
     },
     "afternoon": {
         "F&B": 3718.7900000000004,
         "ATM": 4200.0,
         "TRANSPORT": 673.0500000000002,
-        "TRANSFER": 494.48
+        "TRANSFER": 144.66
     },
     "evening": {
         "TRANSPORT": 738.6400000000001,
         "F&B": 4227.94,
         "ATM": 2200.0,
-        "TRANSFER": 443.03000000000003
+        "TRANSFER": 254.27
     }
 }
