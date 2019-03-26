@@ -1,6 +1,7 @@
 import React from "react";
 import Barchart from './Barchart';
 import {Link} from 'react-router-dom'
+import LearnMore from './LearnMore';
 
 const GraphList = () => {
 

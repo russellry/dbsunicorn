@@ -1,6 +1,8 @@
 import React from "react";
 import Stackchart from './Stackchart'
 import {Link} from 'react-router-dom'
+import LearnMore from './LearnMore';
+import Stackcharttest from './Stackcharttest'
 
 const GraphList = () => {
 
@@ -8,7 +10,7 @@ const GraphList = () => {
     <div class="ui grid">
       <div class="twelve wide stretched column">
         <div class="ui segment">
-          <Stackchart/>
+          <Stackcharttest/>
         </div>
       </div>
       <div class="four wide column">
