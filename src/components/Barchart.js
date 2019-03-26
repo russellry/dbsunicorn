@@ -1,5 +1,6 @@
 import React from "react";
 import "./Barchart.css"
+import jsonFile from '../data/personal_data.json'
 
 function BarGroup(props) {
   let barPadding = 2
@@ -19,26 +20,20 @@ function BarGroup(props) {
 class Barchart extends React.Component {
   state = {
     data: [
-      { name: 'Mon', value: 20 },
-      { name: 'Tue', value: 40 },
-      { name: 'Wed', value: 35 },
-      { name: 'Thu', value: 50 },
-      { name: 'Fri', value: 55 },
-      { name: 'Sat', value: 40 },
-      { name: 'Sun', value: 30 }
+      { name: 'Credit', value: 50 },
+      { name: 'Debit', value: 20 },
     ]
   }
 
   render() {
     let barHeight = 30
-        
     let barGroups = this.state.data.map((d, i) => <g transform={`translate(0, ${i * barHeight})`}>
                                                     <BarGroup d={d} barHeight={barHeight} />
                                                   </g>)                         
     
     return <svg width="800" height="300" >
       <g className="container">
-        <text className="title" x="10" y="30">Week beginning 9th July</text>
+        <text className="title" x="10" y="30">Did you know? Credit payments are worse than debit payments!</text>
         <g className="chart" transform="translate(100,60)">
           {barGroups}
         </g>
