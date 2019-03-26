@@ -1,6 +1,5 @@
 import React from "react";
 import "./Barchart.css"
-import jsonFile from '../data/personal_data.json'
 
 function BarGroup(props) {
   let barPadding = 2

@@ -1,5 +1,4 @@
 import React from "react";
-import Stackchart from './Stackchart'
 import Barchart from './Barchart';
 import {Link} from 'react-router-dom'
 
