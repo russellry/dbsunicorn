@@ -1,0 +1,41 @@
+{
+    "1": {
+        "messageId": 1,
+        "dateCreated": "2018-12-20T08:00:00.000+0000",
+        "summary": "Grab discount with PayLah!",
+        "type": "Savings",
+        "details": {
+            "dateCreated": "2018-12-20T08:00:00.000+0000",
+            "summary": "Grab discount with PayLah!",
+            "subject": "Grab Anniversary Promo",
+            "body": "Enjoy your discount when you pay for Grab with PayLah! Offer till 5th Jul 2019!",
+            "type": "Savings"
+        }
+    },
+    "2": {
+        "messageId": 2,
+        "dateCreated": "2018-12-20T08:06:40.000+0000",
+        "summary": "GoJek voucher with DBS card",
+        "type": "Savings",
+        "details": {
+            "dateCreated": "2018-12-20T08:06:40.000+0000",
+            "summary": "GoJek voucher with DBS card",
+            "subject": "GoJek Launch",
+            "body": "Get free GoJek vouchers when you download the Gojek app and register your DBS/POSB card!",
+            "type": "Savings"
+        }
+    },
+    "3": {
+        "messageId": 3,
+        "dateCreated": "2018-12-20T08:26:40.000+0000",
+        "summary": "Cashback with DBS new credit card",
+        "type": "Credit Cards",
+        "details": {
+            "dateCreated": "2018-12-20T08:26:40.000+0000",
+            "summary": "Cashback with DBS new credit card",
+            "subject": "Dbs new creditcard - DBS Swipe",
+            "body": "Enjoy up to 7% cashback, when you pay with DBS Swipe! T&Cs apply. Till 31 Jul 2019",
+            "type": "Credit Cards"
+        }
+    }
+}

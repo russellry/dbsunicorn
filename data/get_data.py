@@ -99,6 +99,13 @@ def get_marketing_msg_list():
         return data
 
 
+def get_marketing_msg_details(messageId):
+    url = "{}/marketing/{}".format(BASE, messageId)
+    data = get_request(url)
+    if data is not None:
+        return data
+
+
 def get_personal_msg(customerId):
     url = "{}/message/{}".format(BASE, customerId)
     data = get_request(url)
@@ -106,12 +113,14 @@ def get_personal_msg(customerId):
         return data
 
 
-# def get_marketing_data():
-#     data = dict()
-#     marketing_msg_lst = get_marketing_msg_list()
-#     for msg in marketing_msg_lst:
-#         messageId = msg['messageId']
-
+def get_marketing_data():
+    data = dict()
+    marketing_msg_lst = get_marketing_msg_list()
+    for msg in marketing_msg_lst:
+        messageId = msg['messageId']
+        data[messageId] = msg
+        data[messageId]['details'] = get_marketing_msg_details(messageId)
+    return data
 
 
 def get_personal_data():
@@ -151,6 +160,8 @@ def get_personal_data():
     return full_data
 
 if __name__ == '__main__':
-    personal_data = get_personal_data()
-    write_json('personal_data.json', personal_data)
+    # personal_data = get_personal_data()
+    # write_json('personal_data.json', personal_data)
+    marketing_data = get_marketing_data()
+    write_json('marketing_data.json', marketing_data)
  
