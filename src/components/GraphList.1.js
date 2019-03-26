@@ -10,7 +10,7 @@ const GraphList = () => {
     <div class="ui grid">
       <div class="twelve wide stretched column">
         <div class="ui segment">
-          <Stackcharttest/>
+          {/* <Stackcharttest/> */}
         </div>
       </div>
       <div class="four wide column">
@@ -18,6 +18,7 @@ const GraphList = () => {
           <Link to ="/cd" class="item">Spending(Credit vs Debit)</Link>
           <Link to ="/spending" class="active item">Spending (Time Of Day)</Link>
         </div>
+        <LearnMore/>
       </div>
     </div>
   );
