@@ -61,6 +61,29 @@ def sort_transaction_by_cat(data):
     return res
 
 
+def sort_transaction_by_part_of_day(data):
+    """ list of transaction in dict, return dict of sorted transations """
+
+    res = dict()
+    for p in PART_OF_DAY:
+        res[p] = 0.00
+    for t in data:
+        datestr = t["date"]
+        tag = t['tag']
+        transaction_type = t['type']
+
+        amount = round(float(t["amount"]), 2)
+
+        dateobj = datetime.strptime(datestr, "%Y-%m-%dT%H:%M:%S.%f%z")
+        part_of_day = get_part_of_day(dateobj)
+
+        if transaction_type == "DEBIT":
+            # tag
+            res[part_of_day] += amount
+
+    return res
+
+
 def test():
     data = read_json('personal_data.json')
     transaction_sample = data["2"]["debitAccounts"]["74"]["transactions"]
@@ -68,6 +91,8 @@ def test():
     write_json("marytan_past_transactions_sorted.json", res)
     res2 = sort_transaction_by_cat(transaction_sample)
     write_json("mary_tan_transactions_by_tag.json", res2)
+    res3 = sort_transaction_by_part_of_day(transaction_sample)
+    write_json("mary_tan_transactions_by_part_of_day.json", res3)
 
 if __name__ == '__main__':
     test()
