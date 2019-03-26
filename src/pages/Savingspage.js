@@ -9,7 +9,7 @@ class Savingspage extends React.Component {
   state = {videos: [], selectedVideo: null}
 
   componentDidMount(){
-    this.onTermSubmit('Dave Ramsey')
+    this.onTermSubmit('how to invest')
   }
 
   onTermSubmit = async term => {

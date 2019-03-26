@@ -21,7 +21,7 @@ const GraphList = () => {
             Spending (Time Of Day)
           </Link>
         </div>
-        <LearnMore />
+        <Link to ="/savings"> <LearnMore /></Link>
       </div>
       <Progress />
     </div>

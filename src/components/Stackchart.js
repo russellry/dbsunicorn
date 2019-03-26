@@ -34,7 +34,7 @@ class Stackchart extends React.Component {
     
     return <svg width="800" height="300" >
       <g className="container">
-        <text className="title" x="10" y="30">Did you know? Credit payments are worse than debit payments!</text>
+        <text className="title" x="10" y="30">Your expenditure in the month of January</text>
         <g className="chart" transform="translate(100,60)">
           {barGroups}
         </g>
