@@ -9,7 +9,7 @@
     "react-canvas-js": "^1.0.1",
     "react-dom": "^16.8.5",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8",
+    "react-scripts": "5.0.1",
     "react-semantic-ui-range": "^0.6.2",
     "rumble-charts": "^2.0.0",
     "vertical-timeline-component-for-react": "^1.0.6"
